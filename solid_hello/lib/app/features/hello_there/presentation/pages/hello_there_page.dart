@@ -68,6 +68,7 @@ class _HelloThereState extends State<HelloThere> {
                   titleColor: _textColor.withAlpha((0.9 * 255).toInt()),
                   hex: hex,
                   textColor: _textColor.withAlpha((0.8 * 255).toInt()),
+                  buttonIconColor: _bgColor,
                 ),
               ),
             ),

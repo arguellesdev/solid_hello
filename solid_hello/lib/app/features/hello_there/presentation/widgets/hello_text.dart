@@ -13,11 +13,15 @@ class HelloText extends StatelessWidget {
   /// The color of the supporting text.
   final Color textColor;
 
+  /// The color of the button icon.
+  final Color buttonIconColor;
+
   /// Creates a HelloText widget.
   const HelloText({
     required this.titleColor,
     required this.hex,
     required this.textColor,
+    required this.buttonIconColor,
     super.key,
   });
 
@@ -71,8 +75,8 @@ class HelloText extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 24),
-        const CustomElevatedButton(
-          icon: Icon(Icons.hub, size: 32, color: Colors.black54),
+        CustomElevatedButton(
+          icon: Icon(Icons.hub, size: 32, color: buttonIconColor),
           destination: PositivePhrasesPage(),
         ),
       ],
