@@ -14,11 +14,13 @@ class HelloThere extends StatefulWidget {
   State<HelloThere> createState() => _HelloThereState();
 }
 
+/// State class for HelloThere widget managing background and text colors.
 class _HelloThereState extends State<HelloThere> {
   final _cs = ColorService();
   Color _bgColor = Colors.white70;
   Color _textColor = Colors.black54;
 
+  /// Handles tap events by generating a new random background color and updating the text color for readability.
   void _onTap() {
     setState(() {
       _bgColor = _cs.generate24BitColor(); //_cs.generateRandomColor();
@@ -26,6 +28,7 @@ class _HelloThereState extends State<HelloThere> {
     });
   }
 
+  /// Handles long press events by copying the current background color hex value to the clipboard.
   Future<void> _onLongPress() async {
     final hex = _cs.hex(_bgColor);
     await Clipboard.setData(ClipboardData(text: hex));
