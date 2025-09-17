@@ -28,10 +28,10 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: SourGummy
+      fonts:
+        - asset: assets/fonts/SourGummy_Expanded-Light.ttf
+        - asset: assets/fonts/SourGummy_Expanded-Medium.ttf
+        - asset: assets/fonts/SourGummy_SemiExpanded-Bold.ttf
   
