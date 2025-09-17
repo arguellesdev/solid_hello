@@ -70,57 +70,6 @@ class _HelloThereState extends State<HelloThere> {
                   textColor: _textColor.withAlpha((0.8 * 255).toInt()),
                 ),
               ),
-
-              //   child: Column(
-              //     mainAxisSize: MainAxisSize.min,
-              //     children: [
-              //       Text(
-              //         'Hello There',
-              //         textAlign: TextAlign.center,
-              //         style: TextStyle(
-              //           fontFamily: 'SourGummy',
-              //           fontWeight: FontWeight.w700,
-              //           fontSize: 48,
-              //           color: _textColor.withAlpha((0.9 * 255).toInt()),
-              //         ),
-              //       ),
-              //       const SizedBox(height: 8),
-              //       Text(
-              //         hex,
-              //         textAlign: TextAlign.center,
-              //         style: TextStyle(
-              //           fontFamily: 'Bangers',
-              //           fontWeight: FontWeight.w400,
-              //           fontSize: 36,
-              //           color: _textColor,
-              //           fontFeatures: const [FontFeature.tabularFigures()],
-              //         ),
-              //       ),
-              //       const SizedBox(height: 16),
-              //       Text(
-              //         'Love the color?\nTap to get it',
-              //         textAlign: TextAlign.center,
-              //         style: TextStyle(
-              //           fontFamily: 'Bangers',
-              //           fontWeight: FontWeight.w500,
-              //           fontSize: 20,
-              //           color: _textColor.withAlpha((0.82 * 255).toInt()),
-              //         ),
-              //       ),
-              //       const SizedBox(height: 4),
-              //       Text(
-              //         'Psst psst: you are a long-press distance to copy it!',
-              //         textAlign: TextAlign.center,
-              //         style: TextStyle(
-              //           fontFamily: 'Bangers',
-              //           fontWeight: FontWeight.w500,
-              //           fontSize: 16,
-              //           color: _textColor.withAlpha((0.8 * 255).toInt()),
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
             ),
           ),
         ),
