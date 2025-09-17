@@ -77,7 +77,7 @@ class HelloText extends StatelessWidget {
         const SizedBox(height: 24),
         CustomElevatedButton(
           icon: Icon(Icons.hub, size: 32, color: buttonIconColor),
-          destination: PositivePhrasesPage(),
+          destination: const PositivePhrasesPage(),
         ),
       ],
     );
