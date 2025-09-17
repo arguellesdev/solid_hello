@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:solid_hello/app/features/hello_there/services/color_service.dart';
+import 'package:solid_hello/app/features/positive_phrases/models/phrase.dart';
 import 'package:solid_hello/app/features/positive_phrases/presentation/widgets/positive_text.dart';
 import 'package:solid_hello/app/features/positive_phrases/services/positive_phrases_service.dart';
 
@@ -22,7 +23,7 @@ class _PositivePhrasesPageState extends State<PositivePhrasesPage> {
 
   final Color _bg = Colors.white;
   Color _fg = Colors.black54;
-  late String _phrase;
+  late Phrase _phrase;
 
   @override
   void initState() {
@@ -40,11 +41,11 @@ class _PositivePhrasesPageState extends State<PositivePhrasesPage> {
 
   /// Long-press: copy the current phrase and show confirmation.
   Future<void> _onLongPress() async {
-    await Clipboard.setData(ClipboardData(text: _phrase));
+    await Clipboard.setData(ClipboardData(text: _phrase.text));
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('Copied, use this "$_phrase" wisely and kindly!'),
+        content: Text('Copied, use this "${_phrase.text}" wisely and kindly!'),
         duration: const Duration(milliseconds: 1800),
       ),
     );

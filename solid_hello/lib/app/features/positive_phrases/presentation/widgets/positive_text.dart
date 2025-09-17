@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:solid_hello/app/features/positive_phrases/models/phrase.dart';
 
-/// Widget that displays a positive phrase with styling.
+/// Widget that displays a positive phrase with its author, styled with the given foreground color.
 class PositiveText extends StatelessWidget {
-  /// Phrase to display.
-  final String phrase;
+  /// The phrase to display.
+  final Phrase phrase;
 
-  /// Foreground (text) color chosen for readability.
+  /// The color for the text.
   final Color fg;
 
-  /// Internal phrase copy.
+  /// Creates a PositiveText widget with the specified [phrase] and [fg] color.
   const PositiveText({required this.phrase, required this.fg, super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-
       children: [
         Text(
-          phrase,
+          phrase.text,
           textAlign: TextAlign.center,
           style: TextStyle(
             color: fg,
@@ -27,15 +27,24 @@ class PositiveText extends StatelessWidget {
             height: 1.35,
           ),
         ),
+        const SizedBox(height: 12),
+        Text(
+          '- ${phrase.author}',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: fg.withAlpha((0.85 * 255).toInt()),
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         const SizedBox(height: 16),
         Text(
           'Tap to change\nLong-press to copy',
           textAlign: TextAlign.center,
           style: TextStyle(
             fontFamily: 'Bangers',
-            color: fg.withAlpha((0.82 * 255).toInt()),
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
+            color: fg.withAlpha((0.75 * 255).toInt()),
+            fontSize: 18,
           ),
         ),
       ],
