@@ -16,7 +16,7 @@ class _HelloThereState extends State<HelloThere> {
 
   void _onTap() {
     setState(() {
-      _bgColor = _cs.generateRandomColor();
+      _bgColor = _cs.generate24BitColor(); //_cs.generateRandomColor();
       _textColor = _cs.readableOn(_bgColor);
     });
   }
@@ -27,7 +27,7 @@ class _HelloThereState extends State<HelloThere> {
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('Done!  $hex is now on your clipboard'),
+        content: Text('All set! $hex is now on your clipboard'),
         duration: const Duration(milliseconds: 1800),
       ),
     );
@@ -44,13 +44,18 @@ class _HelloThereState extends State<HelloThere> {
         child: InkWell(
           onTap: _onTap,
           onLongPress: _onLongPress,
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          overlayColor: const WidgetStatePropertyAll(Colors.transparent),
           child: SizedBox.expand(
             child: Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    'Hello There!',
+                    'Hello There',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'SourGummy',
@@ -71,26 +76,26 @@ class _HelloThereState extends State<HelloThere> {
                       fontFeatures: const [FontFeature.tabularFigures()],
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 16),
                   Text(
                     'Love the color?\nTap to get it',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'Bangers',
                       fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                      color: _textColor.withAlpha((0.7 * 255).toInt()),
+                      fontSize: 20,
+                      color: _textColor.withAlpha((0.82 * 255).toInt()),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 4),
                   Text(
                     'Psst psst: you are a long-press distance to copy it!',
-                    textAlign: TextAlign.end,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'Bangers',
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w500,
                       fontSize: 16,
-                      color: _textColor.withAlpha((0.6 * 255).toInt()),
+                      color: _textColor.withAlpha((0.8 * 255).toInt()),
                     ),
                   ),
                 ],

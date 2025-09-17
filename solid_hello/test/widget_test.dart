@@ -7,24 +7,25 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:solid_hello/main.dart';
+import 'package:solid_hello/app/app.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('Hello There shows color change on tap, hex code can be copied', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('Hello There'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    final scaffold = tester.widget<Scaffold>(find.byType(Scaffold));
+    final initialColor = scaffold.backgroundColor;
+
+    await tester.tap(find.byType(InkWell));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    final scaffoldAfterTap = tester.widget<Scaffold>(find.byType(Scaffold));
+    final newColor = scaffoldAfterTap.backgroundColor;
+
+    expect(newColor, isNot(equals(initialColor)));
   });
 }
