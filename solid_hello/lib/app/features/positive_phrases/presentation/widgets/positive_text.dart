@@ -39,7 +39,7 @@ class PositiveText extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Text(
-          'Tap to change\nLong-press to copy',
+          'Love it?\n just long-press to copy it!',
           textAlign: TextAlign.center,
           style: TextStyle(
             fontFamily: 'Bangers',
