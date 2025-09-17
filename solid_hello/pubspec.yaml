@@ -35,7 +35,8 @@ flutter:
           weight: 300
         - asset: assets/fonts/SourGummy_Expanded-Medium.ttf
           weight: 500
-        - asset: assets/fonts/SourGummy_SemiExpanded-Bold.ttf
-          weight: 700
-    
-  
+
+    - family: Bangers
+      fonts:
+        - asset: assets/fonts/Bangers-Regular.ttf
+          weight: 300
