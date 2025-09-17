@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+/// Color service handling color generation and contrast calculations separating from the main feature presentation logic.
 class ColorService {
   final Random _rng = Random();
 
