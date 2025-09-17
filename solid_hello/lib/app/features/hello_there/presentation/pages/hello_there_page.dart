@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:solid_hello/app/features/hello_there/presentation/widgets/hello_content.dart';
+import 'package:solid_hello/app/features/hello_there/presentation/widgets/hello_text.dart';
 import 'package:solid_hello/app/features/hello_there/services/color_service.dart';
 
 /// The main page of the application displaying a tappable area that changes background color and shows its hex code.

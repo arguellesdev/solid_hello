@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:solid_hello/app/features/positive_phrases/presentation/pages/positive_phrases_page.dart';
+import 'package:solid_hello/app/shared/widgets/app_elevated_button.dart';
 
 /// HelloText widget displays the main content of the HelloThere page, including title and color information.
 class HelloText extends StatelessWidget {
@@ -67,6 +69,11 @@ class HelloText extends StatelessWidget {
             fontSize: 16,
             color: textColor.withAlpha((0.8 * 255).toInt()),
           ),
+        ),
+        const SizedBox(height: 24),
+        const CustomElevatedButton(
+          icon: Icon(Icons.hub, size: 32, color: Colors.black54),
+          destination: PositivePhrasesPage(),
         ),
       ],
     );

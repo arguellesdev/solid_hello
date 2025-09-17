@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solid_hello/app/features/hello_there/presentation/pages/hello_there.dart';
+import 'package:solid_hello/app/features/hello_there/presentation/pages/hello_there_page.dart';
 
 /// Root widget of the application.
 /// Displays the `HelloThere` page as the home screen.
