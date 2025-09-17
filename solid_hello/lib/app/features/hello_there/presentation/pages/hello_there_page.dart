@@ -24,7 +24,7 @@ class _HelloThereState extends State<HelloThere> {
   /// Handles tap events by generating a new random background color and updating the text color for readability.
   void _onTap() {
     setState(() {
-      _bgColor = _cs.generate24BitColor(); //_cs.generateRandomColor();
+      _bgColor = _cs.generate24BitColor();
       _textColor = _cs.readableOn(_bgColor);
     });
   }
