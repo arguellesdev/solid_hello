@@ -4,6 +4,7 @@ import 'package:solid_hello/app/features/hello_there/presentation/pages/hello_th
 /// Root widget of the application.
 /// Displays the `HelloThere` page as the home screen.
 class MyApp extends StatelessWidget {
+  /// Creates the main application widget.
   const MyApp({super.key});
 
   @override

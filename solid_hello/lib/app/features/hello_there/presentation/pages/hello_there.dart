@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:solid_hello/app/features/hello_there/services/color_service.dart';
 
+/// The main page of the application displaying a tappable area that changes background color and shows its hex code.
+/// - Tap anywhere to change the background color.
+/// - Long press to copy the current color hex value to the clipboard.
+///
 class HelloThere extends StatefulWidget {
+  /// Creates the HelloThere screen.
   const HelloThere({super.key});
 
   @override
