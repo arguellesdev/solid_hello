@@ -25,13 +25,13 @@ This project is a starting point for a Flutter application.
 ---
 
 ## Widgets and Services used
-    - **InkWell**: detect tap and long press.
-    - **AnimatedContainer**: fade background color change.
-    - **SnackBar**: show confirmation when copy color.
-    - **Clipboard**: save color hex code.
-    - **ColorService**: helper to generate 24-bit colors, check readability, and format hex.
-    - **PhrasesService**: provide random inspirational phrases.
-    - **PositiveText (shared widget)**: display phrase + author with consistent style.  
+    - InkWell: detect tap and long press.
+    - AnimatedContainer: fade background color change.
+    - SnackBar: shows confirmation when copy color.
+    - Clipboard: save color hex code.
+    - ColorService: helper to generate 24-bit colors, check readability, and format hex.
+    - PhrasesService: provide random inspirational phrases.
+    - PositiveText (shared widget): display phrase + author with consistent style.  
 
 
 ## Run the app 
