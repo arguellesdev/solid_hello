@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:solid_hello/app/features/hello_there/services/color_service.dart';
 import 'package:solid_hello/app/features/positive_phrases/presentation/pages/positive_phrases_page.dart';
 import 'package:solid_hello/app/shared/widgets/app_elevated_button.dart';
 
@@ -29,7 +30,6 @@ class HelloText extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
-
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -40,7 +40,9 @@ class HelloText extends StatelessWidget {
               fontFamily: 'SourGummy',
               fontWeight: FontWeight.w700,
               fontSize: 48,
-              color: titleColor,
+
+              //TODO (ANYA): Random color should not be here since is stless widget BE CAREFULL
+              color: ColorService().generateRandomColor(),
             ),
           ),
           const SizedBox(height: 8),

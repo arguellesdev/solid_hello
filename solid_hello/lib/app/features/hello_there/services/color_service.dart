@@ -16,10 +16,12 @@ class ColorService {
     );
   }
 
-  /// Generates a random opaque 24-bit color.
+  /// Generates a random opaque 24-bit shift color.
   Color generate24BitColor() {
     final rgb = _rng.nextInt(1 << 24);
-    return Color(0xFF000000 | rgb);
+    return Color(rgb);
+
+    // TODO (ANYA): Review red/blue channels
   }
 
   /// Determines a readable text color (black or white) based on the background color's luminance.
