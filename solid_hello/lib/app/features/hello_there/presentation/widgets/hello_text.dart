@@ -4,7 +4,7 @@ import 'package:solid_hello/app/features/positive_phrases/presentation/pages/pos
 import 'package:solid_hello/app/shared/widgets/app_elevated_button.dart';
 
 /// HelloText widget displays the main content of the HelloThere page, including title and color information.
-class HelloText extends StatelessWidget {
+class HelloText extends StatefulWidget {
   /// The color of the title text.
   final Color titleColor;
 
@@ -27,6 +27,11 @@ class HelloText extends StatelessWidget {
   });
 
   @override
+  State<HelloText> createState() => _HelloTextState();
+}
+
+class _HelloTextState extends State<HelloText> {
+  @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
@@ -47,13 +52,13 @@ class HelloText extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            hex,
+            widget.hex,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: 'Bangers',
               fontWeight: FontWeight.w400,
               fontSize: 36,
-              color: textColor,
+              color: widget.textColor,
               fontFeatures: const [FontFeature.tabularFigures()],
             ),
           ),
@@ -65,7 +70,7 @@ class HelloText extends StatelessWidget {
               fontFamily: 'Bangers',
               fontWeight: FontWeight.w500,
               fontSize: 20,
-              color: textColor.withAlpha((0.82 * 255).toInt()),
+              color: widget.textColor.withAlpha((0.82 * 255).toInt()),
             ),
           ),
           const SizedBox(height: 4),
@@ -76,12 +81,12 @@ class HelloText extends StatelessWidget {
               fontFamily: 'Bangers',
               fontWeight: FontWeight.w500,
               fontSize: 16,
-              color: textColor.withAlpha((0.8 * 255).toInt()),
+              color: widget.textColor.withAlpha((0.8 * 255).toInt()),
             ),
           ),
           const SizedBox(height: 24),
           CustomElevatedButton(
-            icon: Icon(Icons.hub, size: 32, color: buttonIconColor),
+            icon: Icon(Icons.hub, size: 32, color: widget.buttonIconColor),
             destination: const PositivePhrasesPage(),
           ),
         ],
